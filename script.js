@@ -2,39 +2,38 @@ let garage = document.getElementById("garage");
 const list = document.createElement("button");
 let cars = document.getElementById("addCar");
 cars.addEventListener("click", boton);
-//cars.addEventListener("dblclick", borarBoton );
-//let btn = document.createElement("button");
-//btn.innerHTML = "Submit";
-//btn.type = "submit";
-//btn.name = "formBtn";
-//document.body.appendChild(btn);
+
 
 function boton() {
-  let btn = document.createElement("input");
-  btn.value = ("New Car");
-  btn.type = "text";
+  let entry = document.createElement("input");
+  entry.value = ("New Car");
+  entry.type = "text";
   //btn.name = "formBtn";
-  document.body.appendChild(btn);
+  document.body.appendChild(entry);
+  const enterButton = document.createElement("button");
+  enterButton.textContent = "O";
+  enterButton.style.color = "white";
+  enterButton.style.backgroundColor = "green";
+  document.body.appendChild(enterButton);
+  enterButton.addEventListener("click", () => {
+console.log('entered');
+  });
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "X";
   deleteButton.style.color = "white";
   deleteButton.style.backgroundColor = "red";
-  //deleteButton.style.boxShadow = "2px 5px black";
   document.body.appendChild(deleteButton);
   deleteButton.addEventListener("click", () => {
-    btn.remove();
+    entry.remove();
+    enterButton.remove();
     deleteButton.remove();
+
   });
+
   
-  btn.addEventListener("click", () => {
-    //document.body.querySelector(".btn");
-    //btn.textContent='New Text';
-    btn.value=( '');
+  entry.addEventListener("click", () => {
+    entry.value=('');
     console.log("ye");
   });
 }
-//function borarBoton (event) {
-// let btn = document.getElementById("button");
-// btn.remove ();
-//  console.log("1");
-//}
+
