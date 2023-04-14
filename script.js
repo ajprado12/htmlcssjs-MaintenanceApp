@@ -14,11 +14,16 @@ lista.body.appendChild(carList);
 
 
 function boton() {
+let lista = document.getElementById('cars');
+  //let forms = document.createElement("option");
+  //forms.value = 'Type';
+  //document.body.appendChild(forms);
   let entry = document.createElement("input");
-  entry.value = "New Car";
+  entry.placeholder = "New Car";
+
   entry.type = "text";
   //btn.name = "formBtn";
-  document.body.appendChild(entry);
+  lista.appendChild(entry);
   entry.addEventListener("click", () => {
     entry.value=('');
     console.log("ye");
@@ -26,12 +31,12 @@ function boton() {
 const form = document.createElement("input");
 form.innerText = 'ye';
 form.type = 'input';
-document.body.appendChild(form);
+lista.appendChild(form);
   const enterButton = document.createElement("button");
   enterButton.textContent = "O";
   enterButton.style.color = "white";
   enterButton.style.backgroundColor = "green";
-  document.body.appendChild(enterButton);
+  lista.appendChild(enterButton);
   enterButton.addEventListener("click", () => {
 console.log('entered');
 alert("Noice");
@@ -41,7 +46,7 @@ alert("Noice");
   deleteButton.style.color = "white";
   deleteButton.style.backgroundColor = "red";
   deleteButton.type = "submit";
-  document.body.appendChild(deleteButton);
+  lista.appendChild(deleteButton);
   deleteButton.addEventListener("click", () => {
     entry.remove();
     enterButton.remove();

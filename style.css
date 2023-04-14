@@ -1,0 +1,25 @@
+#Cars {
+    display: inline-block;
+    justify-content: right;
+    align-items: center;
+    margin-top: 0%;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 120px;
+
+}
+#carstitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    padding-left: 2%;
+    margin-top: 0%;
+}
+.listCars {
+    
+    display: flex;
+}
